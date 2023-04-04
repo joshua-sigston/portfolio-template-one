@@ -1,0 +1,4 @@
+.about_page_container {
+    display: grid;
+    gap: 3em;
+}

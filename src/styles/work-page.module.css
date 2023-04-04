@@ -1,0 +1,23 @@
+.movie_container,
+.racer_container,
+.goodtimes_container {
+    padding-top: 3em;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.line {
+    width: 100%;
+    height: .25rem;
+    background-color: var(--clr-whisper);
+}
+
+@media screen and (min-width: 768px) {
+    .movie_container,
+    .racer_container,
+    .goodtimes_container {
+        min-height: 90vh;
+    }   
+}

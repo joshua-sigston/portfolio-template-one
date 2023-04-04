@@ -1,0 +1,39 @@
+.faqs_container {
+    text-align: center;
+    display: grid;
+    gap: 1em;
+}
+
+.faqs_container h2 {
+    font-size: 3rem;
+}
+
+.faqs_container span {
+    color: var(--medium-violet-red);
+}
+
+.questions_container {
+    display: grid;
+    gap: 2em;
+}
+
+.questions_container h4 {
+    font-size: 1.8rem;
+}
+
+.answer {
+    display: none;
+}
+
+.line {
+    width: 100%;
+    height: .25rem;
+    background-color: var(--clr-whisper);
+}
+
+@media screen and (min-width: 768px) {
+    .faqs_container {
+        min-height: 90vh;
+        text-align: left;
+    }
+}
