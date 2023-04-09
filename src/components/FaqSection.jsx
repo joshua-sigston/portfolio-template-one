@@ -4,11 +4,18 @@ import styles from '../styles/faqs.module.css'
 
 import Toggle from './Toggle'
 
-import { LayoutGroup } from 'framer-motion'
+import { LayoutGroup, motion } from 'framer-motion'
+import UseScroll from './UseScroll'
+import { fade } from '../animations'
 
 function FaqSection() {
+  const [element, controls] = UseScroll()
   return (
-    <div className={styles.faqs_container}>
+    <motion.div className={styles.faqs_container}
+      variants={fade}
+      animate={controls}
+      initial="hidden"
+      ref={element}>
       <h2>Any Quesitons <span>FAQ</span></h2>
       <div className={styles.questions_container}>
       <LayoutGroup>
@@ -34,7 +41,7 @@ function FaqSection() {
       </Toggle>
       </LayoutGroup>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

@@ -7,9 +7,19 @@ import money from '../img/money.svg'
 import teamwork from '../img/teamwork.svg'
 import homeTwo from '../img/home2.png'
 
+import UseScroll from './UseScroll'
+import { fade } from '../animations'
+import { motion } from 'framer-motion'
+
 function ServicesSection() {
+ const [element, controls] = UseScroll()
+
   return (
-    <div className={styles.services_container}>
+    <motion.div className={styles.services_container}
+      variants={fade}
+      animate={controls}
+      initial="hidden"
+      ref={element}>
       <div className={styles.left_col}>
         <h2>High <span>quality</span> services</h2>
         <div className={styles.cards_container}>
@@ -46,7 +56,7 @@ function ServicesSection() {
       <div className={styles.right_col}>
         <img src={homeTwo} alt="home" className={styles.section_img}/>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

@@ -5,7 +5,7 @@ import styles from '../styles/about-page.module.css'
 import AboutSection from '../components/AboutSection'
 import ServicesSection from '../components/ServicesSection'
 import FaqSection from '../components/FaqSection'
-
+import ScrollTop from '../components/ScrollTop'
 // animations
 import { motion } from 'framer-motion'
 import { pageAnimation } from '../animations'
@@ -20,6 +20,7 @@ function AboutUs() {
       <AboutSection />
       <ServicesSection />
       <FaqSection />
+      <ScrollTop />
     </motion.div>
   )
 }

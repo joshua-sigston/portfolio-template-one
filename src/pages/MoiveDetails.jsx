@@ -21,8 +21,8 @@ function MoiveDetails() {
     {movie && (
         <div className={styles.movie_container}>
             <div className={styles.headline}>
-            <h2>{movie.title}</h2>
-            <img src={movie.mainImg} alt={movie.title} />
+                <h2>{movie.title}</h2>
+                <img src={movie.mainImg} alt={movie.title} />
             </div>
             <div className={styles.awards_container}>
                 {movie.awards.map((award) => (
